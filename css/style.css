@@ -5,6 +5,8 @@
 body {
     margin: auto;
     /* text-align: center; */
+    padding: 0 20px;
+
 }
 
 form {
@@ -17,4 +19,8 @@ form {
 
 .hidden {
     display: none;
+}
+
+.log-in-img{
+    height: 75px;
 }
