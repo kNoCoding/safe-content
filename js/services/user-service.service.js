@@ -1,6 +1,7 @@
 'use strict'
 
 var gUsers
+var gLoggedInUser
 var gIdNum = 100
 
 _createUsers()
@@ -13,10 +14,11 @@ function getUsersToShow() { }
 // Also save the loggedinUser to localStorage
 function doLogIn(uname, psw) {
     var users = gUsers
-    console.log('users:', users)
     var loggedInUser = users.find(user => user.uname === uname && user.psw === psw)
-    console.log('loggedInUser:', loggedInUser)
-
+    if (loggedInUser !== undefined) loggedInUser.lastLoginTime = getTimeStamp()
+    _saveUsers()
+    gLoggedInUser = loggedInUser
+    console.log('gLoggedInUser:', gLoggedInUser)
     return loggedInUser
 }
 
