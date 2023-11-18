@@ -24,3 +24,16 @@ form {
 .log-in-img{
     height: 75px;
 }
+
+table{
+    margin-top: 20px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+tr, td {
+    border: 1px solid black;
+
+}
+td{
+    padding: 4px;
+}

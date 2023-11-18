@@ -1,6 +1,5 @@
 'use strict'
 
-
 function onInit() {
     renderLogIn()
 }
@@ -48,10 +47,6 @@ function renderSecretContent() {
     elSecretContentContainer.innerHTML = strHtml
 }
 
-function renderUsers() {
-
-}
-
 function concealSecretContent() {
     const elSecretContentContainer = document.querySelector('.secret-content-container')
     elSecretContentContainer.innerHTML = ``
@@ -81,4 +76,3 @@ function onLogOut() {
     localStorage.clear()
     renderLogIn()
 }
-
