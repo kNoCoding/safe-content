@@ -8,21 +8,10 @@
     <title>Safe content</title>
 </head>
 
-<body>
-    <h1>Sign In!</h1>
+<body onload="onInit()">
+    <div class="log-in-container"></div>
 
-    <img src="img/log-in.jpg" alt="log-in-image">
-
-    <form onsubmit="onLogIn(event)" class="log-in-form">
-        <label for="uname" class="uname">Username</label>
-        <input type="text" name="uname" placeholder="Enter Username">
-
-        <label for="psw" class="psw">Password</label>
-        <input type="password" name="psw" placeholder="Enter Password">
-
-        <button type="submit">Login</button>
-    </form>
-
+    <div class="secret-content-container"></div>
 
     <script src="js/safe-content.js"></script>
 </body>
