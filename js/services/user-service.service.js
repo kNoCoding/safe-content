@@ -3,11 +3,19 @@
 var gUsers
 var gLoggedInUser
 var gIdNum = 100
+var gSortBy = 'lastLoginTime'
 
 _createUsers()
 
 // returns users by the current sorting
-function getUsersToShow() { }
+function getUsersToShow() {
+    var users = gUsers
+    if (gSortBy === 'lastLoginTime') {
+        users.sort((a, b) => b.lastLoginTime - a.lastLoginTime)
+    }
+
+    return users
+}
 
 //the function should return the user object if found or null if not (HINT: use array.find) 
 // If the user successfully log-in, update his lastLoginDate 
