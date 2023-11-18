@@ -15,15 +15,15 @@ function renderLogIn() {
     <h1>Sign In!</h1>
     <img src="img/log-in.jpg" alt="log-in-image">
 
-    <section class="log-in-form">
+    <form class="log-in-form" onsubmit="onLogIn(event)">
         <label for="uname" class="uname">Username</label>
         <input type="text" name="uname" placeholder="Enter Username">
 
         <label for="psw" class="psw">Password</label>
         <input type="password" name="psw" placeholder="Enter Password">
 
-        <button onclick="onLogIn()">Login</button>
-    </section>
+        <button type="submit">Login</button>
+    </form>
     `
     elLogInContainer.innerHTML = strHtml
     console.log('elLogInContainer:', elLogInContainer)
@@ -35,12 +35,33 @@ function concealLogIn() {
     elLogInContainer.innerHTML = ``
 }
 
+function checkDetails(uname, psw){
+    var form = document.querySelector('.log-in-form')
+    var username = form.uname.value
+    var password = form.psw.value
 
-function onLogIn() {
+    var users = gUsers
+    // var foundUser = users.find(user => user.uname === )
+
+}
+
+function onLogIn(ev) {
+
+    var form = document.querySelector('.log-in-form')
+    var username = form.uname.value
+    var password = form.psw.value
+    console.log('ev:', ev)
+    ev.preventDefault()
     concealLogIn()
     console.log('user logged in!')
     renderSecretContent()
+
+
+
+    console.log('Username:', username, 'Password:', password);
 }
+
+
 
 function renderSecretContent() {
     const elSecretContentContainer = document.querySelector('.secret-content-container')

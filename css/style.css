@@ -3,7 +3,7 @@
 }
 
 body {
-    margin: 0 auto;
+    margin: auto;
     /* text-align: center; */
 }
 
@@ -13,4 +13,8 @@ form {
     flex-direction: column;
     align-items: start;
     gap: 1vh;
+}
+
+.hidden {
+    display: none;
 }
