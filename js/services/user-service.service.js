@@ -3,6 +3,7 @@
 var gUsers
 var gIdNum = 100
 
+_createUsers()
 
 // returns users by the current sorting
 function getUsersToShow() { }
@@ -10,7 +11,14 @@ function getUsersToShow() { }
 //the function should return the user object if found or null if not (HINT: use array.find) 
 // If the user successfully log-in, update his lastLoginDate 
 // Also save the loggedinUser to localStorage
-function doLogin(userName, password) { }
+function doLogIn(uname, psw) {
+    var users = gUsers
+    console.log('users:', users)
+    var loggedInUser = users.find(user => user.uname === uname && user.psw === psw)
+    console.log('loggedInUser:', loggedInUser)
+
+    return loggedInUser
+}
 
 // Private functions
 
