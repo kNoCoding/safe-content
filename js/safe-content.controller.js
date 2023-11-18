@@ -31,16 +31,24 @@ function concealLogIn() {
 
 function renderSecretContent() {
     const elSecretContentContainer = document.querySelector('.secret-content-container')
-    const strHtml = `
+    var strHtml = `
     <h2 class="secret-content-greeting">Welcome back:<span class="uname">${gLoggedInUser.uname}</span>
     <button class="log-out-btn" onclick="onLogOut()">Logout</button></h2>
     <p class="is-admin-contaniner">Admin user? <span class="is-admin">${gLoggedInUser.isAdmin}</span></p>
     <p>Secret Content ~~ Secret Content ~~ Secret Content ~~ Secret Content ~~ Secret Content ~~ Secret Content ~~ Secret Content ~~ Secret Content ~~ </p>
     `
 
+    if (gLoggedInUser.isAdmin) {
+        // var users = getUsersToShow()
+        // var elSecretUsers = `<div class="secret-users">${users}</div>`
+        // strHtml += elSecretUsers
+        const elAdminBtn = `<a href="admin.html"><button class="admin-btn">ADMIN</button></a>`
+        strHtml += elAdminBtn
+    }
     elSecretContentContainer.innerHTML = strHtml
-    // var elUname = document.querySelector('.uname')
-    // elUname.innerText = gLoggedInUser.uname
+}
+
+function renderUsers() {
 
 }
 

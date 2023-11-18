@@ -14,7 +14,7 @@ function getUsersToShow() {
         users.sort((a, b) => b.lastLoginTime - a.lastLoginTime)
     }
 
-    return users
+return users
 }
 
 //the function should return the user object if found or null if not (HINT: use array.find) 
